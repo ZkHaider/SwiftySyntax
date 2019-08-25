@@ -18,3 +18,6 @@
 #include "./tree.c"
 #include "./utf16.c"
 #include "./utf8proc.c"
+
+// Languages 
+#include "../languages/json.c"

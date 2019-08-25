@@ -86,6 +86,14 @@ typedef struct {
   const void *id;
   uint32_t context[2];
 } TSTreeCursor;
+    
+/*******************/
+/* Languages */
+/*******************/
+
+/// JSON
+const TSLanguage *tree_sitter_json();
+
 
 /********************/
 /* Section - Parser */

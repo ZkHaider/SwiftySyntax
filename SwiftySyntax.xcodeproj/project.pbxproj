@@ -41,7 +41,24 @@
 		C4533E9123130AD40047AB76 /* utf8proc.c in Sources */ = {isa = PBXBuildFile; fileRef = C4533E8E23130AD40047AB76 /* utf8proc.c */; };
 		C4533E9223130AD40047AB76 /* utf8proc.h in Headers */ = {isa = PBXBuildFile; fileRef = C4533E8F23130AD40047AB76 /* utf8proc.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4533E9323130AD40047AB76 /* utf8proc_data.c in Sources */ = {isa = PBXBuildFile; fileRef = C4533E9023130AD40047AB76 /* utf8proc_data.c */; };
+		C4533E9B23130C310047AB76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4533E9A23130C310047AB76 /* AppDelegate.swift */; };
+		C4533E9D23130C310047AB76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4533E9C23130C310047AB76 /* SceneDelegate.swift */; };
+		C4533E9F23130C310047AB76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4533E9E23130C310047AB76 /* ViewController.swift */; };
+		C4533EA223130C310047AB76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA023130C310047AB76 /* Main.storyboard */; };
+		C4533EA423130C320047AB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA323130C320047AB76 /* Assets.xcassets */; };
+		C4533EA723130C320047AB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA523130C320047AB76 /* LaunchScreen.storyboard */; };
+		C4533EB223131C9F0047AB76 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4533EB123131C9F0047AB76 /* json.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4533EAC23130C630047AB76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4533E29231304B90047AB76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4533E31231304B90047AB76;
+			remoteInfo = SwiftySyntax;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C4533E32231304B90047AB76 /* SwiftySyntax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftySyntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,10 +97,26 @@
 		C4533E8E23130AD40047AB76 /* utf8proc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf8proc.c; sourceTree = "<group>"; };
 		C4533E8F23130AD40047AB76 /* utf8proc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf8proc.h; sourceTree = "<group>"; };
 		C4533E9023130AD40047AB76 /* utf8proc_data.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utf8proc_data.c; sourceTree = "<group>"; };
+		C4533E9823130C300047AB76 /* TreeSitter-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TreeSitter-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4533E9A23130C310047AB76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4533E9C23130C310047AB76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C4533E9E23130C310047AB76 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4533EA123130C310047AB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4533EA323130C320047AB76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4533EA623130C320047AB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4533EA823130C320047AB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4533EB123131C9F0047AB76 /* json.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C4533E2F231304B90047AB76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4533E9523130C300047AB76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,6 +129,7 @@
 		C4533E28231304B90047AB76 = {
 			isa = PBXGroup;
 			children = (
+				C4533E9923130C310047AB76 /* TreeSitter-iOS */,
 				C4533E34231304B90047AB76 /* SwiftySyntax */,
 				C4533E33231304B90047AB76 /* Products */,
 			);
@@ -105,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C4533E32231304B90047AB76 /* SwiftySyntax.framework */,
+				C4533E9823130C300047AB76 /* TreeSitter-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +150,7 @@
 				C4533E35231304B90047AB76 /* SwiftySyntax.h */,
 				C4533E36231304B90047AB76 /* Info.plist */,
 				C4533E462313056F0047AB76 /* include */,
+				C4533EB023131C4C0047AB76 /* languages */,
 				C4533E45231305640047AB76 /* src */,
 			);
 			path = SwiftySyntax;
@@ -167,6 +203,28 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		C4533E9923130C310047AB76 /* TreeSitter-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C4533E9A23130C310047AB76 /* AppDelegate.swift */,
+				C4533E9C23130C310047AB76 /* SceneDelegate.swift */,
+				C4533E9E23130C310047AB76 /* ViewController.swift */,
+				C4533EA023130C310047AB76 /* Main.storyboard */,
+				C4533EA323130C320047AB76 /* Assets.xcassets */,
+				C4533EA523130C320047AB76 /* LaunchScreen.storyboard */,
+				C4533EA823130C320047AB76 /* Info.plist */,
+			);
+			path = "TreeSitter-iOS";
+			sourceTree = "<group>";
+		};
+		C4533EB023131C4C0047AB76 /* languages */ = {
+			isa = PBXGroup;
+			children = (
+				C4533EB123131C9F0047AB76 /* json.c */,
+			);
+			path = languages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -174,6 +232,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4533E37231304B90047AB76 /* SwiftySyntax.h in Headers */,
 				C4533E7B231305A10047AB76 /* length.h in Headers */,
 				C4533E86231307460047AB76 /* parser.h in Headers */,
 				C4533E85231307460047AB76 /* api.h in Headers */,
@@ -190,7 +249,6 @@
 				C4533E9223130AD40047AB76 /* utf8proc.h in Headers */,
 				C4533E71231305A10047AB76 /* language.h in Headers */,
 				C4533E77231305A10047AB76 /* subtree.h in Headers */,
-				C4533E37231304B90047AB76 /* SwiftySyntax.h in Headers */,
 				C4533E74231305A10047AB76 /* reduce_action.h in Headers */,
 				C4533E78231305A10047AB76 /* clock.h in Headers */,
 				C4533E6A231305A10047AB76 /* atomic.h in Headers */,
@@ -219,16 +277,39 @@
 			productReference = C4533E32231304B90047AB76 /* SwiftySyntax.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		C4533E9723130C300047AB76 /* TreeSitter-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4533EA923130C320047AB76 /* Build configuration list for PBXNativeTarget "TreeSitter-iOS" */;
+			buildPhases = (
+				C4533E9423130C300047AB76 /* Sources */,
+				C4533E9523130C300047AB76 /* Frameworks */,
+				C4533E9623130C300047AB76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4533EAD23130C630047AB76 /* PBXTargetDependency */,
+			);
+			name = "TreeSitter-iOS";
+			productName = "TreeSitter-iOS";
+			productReference = C4533E9823130C300047AB76 /* TreeSitter-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C4533E29231304B90047AB76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = zkhaider;
 				TargetAttributes = {
 					C4533E31231304B90047AB76 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+					C4533E9723130C300047AB76 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -246,6 +327,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				C4533E9723130C300047AB76 /* TreeSitter-iOS */,
 				C4533E31231304B90047AB76 /* SwiftySyntax */,
 			);
 		};
@@ -256,6 +338,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4533E9623130C300047AB76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4533EA723130C320047AB76 /* LaunchScreen.storyboard in Resources */,
+				C4533EA423130C320047AB76 /* Assets.xcassets in Resources */,
+				C4533EA223130C310047AB76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +371,48 @@
 				C4533E64231305A10047AB76 /* node.c in Sources */,
 				C4533E67231305A10047AB76 /* language.c in Sources */,
 				C4533E73231305A10047AB76 /* tree.c in Sources */,
+				C4533EB223131C9F0047AB76 /* json.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4533E9423130C300047AB76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4533E9F23130C310047AB76 /* ViewController.swift in Sources */,
+				C4533E9B23130C310047AB76 /* AppDelegate.swift in Sources */,
+				C4533E9D23130C310047AB76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4533EAD23130C630047AB76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4533E31231304B90047AB76 /* SwiftySyntax */;
+			targetProxy = C4533EAC23130C630047AB76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4533EA023130C310047AB76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4533EA123130C310047AB76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4533EA523130C320047AB76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4533EA623130C320047AB76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C4533E38231304B90047AB76 /* Debug */ = {
@@ -408,6 +538,7 @@
 		C4533E3B231304B90047AB76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EVL2DEPTTR;
@@ -434,6 +565,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SUPPORTS_UIKITFORMAC = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TVOS_DEPLOYMENT_TARGET = 10.0;
@@ -445,6 +577,7 @@
 		C4533E3C231304B90047AB76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EVL2DEPTTR;
@@ -479,6 +612,42 @@
 			};
 			name = Release;
 		};
+		C4533EAA23130C320047AB76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVL2DEPTTR;
+				INFOPLIST_FILE = "TreeSitter-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zkhaider.TreeSitter-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4533EAB23130C320047AB76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVL2DEPTTR;
+				INFOPLIST_FILE = "TreeSitter-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zkhaider.TreeSitter-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,6 +665,15 @@
 			buildConfigurations = (
 				C4533E3B231304B90047AB76 /* Debug */,
 				C4533E3C231304B90047AB76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4533EA923130C320047AB76 /* Build configuration list for PBXNativeTarget "TreeSitter-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4533EAA23130C320047AB76 /* Debug */,
+				C4533EAB23130C320047AB76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
