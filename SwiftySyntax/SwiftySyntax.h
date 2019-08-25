@@ -6,7 +6,7 @@
 //  Copyright © 2019 zkhaider. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for SwiftySyntax.
 FOUNDATION_EXPORT double SwiftySyntaxVersionNumber;
@@ -15,5 +15,5 @@ FOUNDATION_EXPORT double SwiftySyntaxVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftySyntaxVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SwiftySyntax/PublicHeader.h>
-
-
+#import <SwiftySyntax/api.h>
+#import <SwiftySyntax/parser.h>
