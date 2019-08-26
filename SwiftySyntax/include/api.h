@@ -92,8 +92,16 @@ typedef struct {
 /*******************/
 
 /// JSON
-const TSLanguage *tree_sitter_json();
-
+const TSLanguage *tree_sitter_json(void);
+    
+/// Python
+//const TSLanguage *tree_sitter_python(void);
+//
+///// Rust
+//const TSLanguage *tree_sitter_rust(void);
+//
+///// PHP
+//const TSLanguage *tree_sitter_php(void);
 
 /********************/
 /* Section - Parser */

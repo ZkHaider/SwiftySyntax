@@ -40,6 +40,9 @@ class ViewController: UIViewController {
         print(rootNode)
         print(sExpression)
         print("✅")
+        
+        ts_tree_delete(tree)
+        ts_parser_delete(parser)
     }
 
 

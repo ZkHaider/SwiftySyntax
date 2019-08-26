@@ -20,4 +20,4 @@
 #include "./utf8proc.c"
 
 // Languages 
-#include "../languages/json.c"
+#include "../languages/json/json.c"
