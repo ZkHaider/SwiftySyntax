@@ -52,6 +52,7 @@
 		C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */; };
 		C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */; };
 		C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */; };
+		C4ECC9BB231395FA000B3A0B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4ECC9BA231395FA000B3A0B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Configuration.swift; sourceTree = "<group>"; };
 		C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Language.swift; sourceTree = "<group>"; };
 		C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.swift; sourceTree = "<group>"; };
+		C4ECC9BA231395FA000B3A0B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		C4533E28231304B90047AB76 = {
 			isa = PBXGroup;
 			children = (
+				C4ECC9BA231395FA000B3A0B /* README.md */,
 				C4533E9923130C310047AB76 /* TreeSitter-iOS */,
 				C4533E34231304B90047AB76 /* SwiftySyntax */,
 				C4533E33231304B90047AB76 /* Products */,
@@ -374,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ECC9BB231395FA000B3A0B /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
