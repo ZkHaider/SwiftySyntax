@@ -48,9 +48,10 @@
 		C4533EA423130C320047AB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA323130C320047AB76 /* Assets.xcassets */; };
 		C4533EA723130C320047AB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA523130C320047AB76 /* LaunchScreen.storyboard */; };
 		C4533EE5231368F10047AB76 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4533EB123131C9F0047AB76 /* json.c */; };
-		C4ECC9B323138257000B3A0B /* Tree.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B223138257000B3A0B /* Tree.Parser.swift */; };
-		C4ECC9B523138275000B3A0B /* Tree.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B423138275000B3A0B /* Tree.Configuration.swift */; };
-		C4ECC9B7231382B6000B3A0B /* Tree.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Tree.Language.swift */; };
+		C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */; };
+		C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */; };
+		C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */; };
+		C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,9 +110,10 @@
 		C4533EA623130C320047AB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4533EA823130C320047AB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4533EB123131C9F0047AB76 /* json.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json.c; sourceTree = "<group>"; };
-		C4ECC9B223138257000B3A0B /* Tree.Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.Parser.swift; sourceTree = "<group>"; };
-		C4ECC9B423138275000B3A0B /* Tree.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.Configuration.swift; sourceTree = "<group>"; };
-		C4ECC9B6231382B6000B3A0B /* Tree.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.Language.swift; sourceTree = "<group>"; };
+		C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Parser.swift; sourceTree = "<group>"; };
+		C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Configuration.swift; sourceTree = "<group>"; };
+		C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Language.swift; sourceTree = "<group>"; };
+		C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,9 +253,10 @@
 		C4ECC9B123138221000B3A0B /* API */ = {
 			isa = PBXGroup;
 			children = (
-				C4ECC9B223138257000B3A0B /* Tree.Parser.swift */,
-				C4ECC9B423138275000B3A0B /* Tree.Configuration.swift */,
-				C4ECC9B6231382B6000B3A0B /* Tree.Language.swift */,
+				C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */,
+				C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */,
+				C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */,
+				C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -392,16 +395,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4533E9323130AD40047AB76 /* utf8proc_data.c in Sources */,
-				C4ECC9B323138257000B3A0B /* Tree.Parser.swift in Sources */,
+				C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */,
 				C4533E6D231305A10047AB76 /* utf16.c in Sources */,
 				C4533E66231305A10047AB76 /* lib.c in Sources */,
 				C4533E9123130AD40047AB76 /* utf8proc.c in Sources */,
 				C4533EE5231368F10047AB76 /* json.c in Sources */,
 				C4533E69231305A10047AB76 /* get_changed_ranges.c in Sources */,
-				C4ECC9B7231382B6000B3A0B /* Tree.Language.swift in Sources */,
+				C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */,
+				C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */,
 				C4533E65231305A10047AB76 /* subtree.c in Sources */,
 				C4533E76231305A10047AB76 /* parser.c in Sources */,
-				C4ECC9B523138275000B3A0B /* Tree.Configuration.swift in Sources */,
+				C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */,
 				C4533E7D231305A10047AB76 /* tree_cursor.c in Sources */,
 				C4533E72231305A10047AB76 /* stack.c in Sources */,
 				C4533E79231305A10047AB76 /* lexer.c in Sources */,

@@ -8,15 +8,9 @@
 
 import Foundation
 
-public enum TreeLanguage {
+public enum SyntaxLanguage {
     case json
 //    case python
 //    case php
 //    case rust
-}
-
-extension TreeLanguage {
-    
-    
-    
 }

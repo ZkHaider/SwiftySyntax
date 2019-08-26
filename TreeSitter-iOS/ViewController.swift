@@ -14,35 +14,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let parser = ts_parser_new()
-        ts_parser_set_language(parser, tree_sitter_json())
-        
         let sourceCode = """
         {
-            "counter": 0
+            "counter": 0,
+            "images": [
+                {
+                    "id": 10,
+                    "url": "https://someimage.com/image/12"
+                }
+            ]
         }
         """
         
-        let tree = ts_parser_parse_string(
-            parser,
-            nil,
-            sourceCode,
-            UInt32(sourceCode.count)
-        )
-        
-        let rootNode: TSNode = ts_tree_root_node(tree)
-        
-        let pointer = ts_node_string(rootNode)!
-        let sExpression = String(cString: pointer)
-        
-        print(parser)
-        print(tree)
-        print(rootNode)
-        print(sExpression)
-        print("✅")
-        
-        ts_tree_delete(tree)
-        ts_parser_delete(parser)
+        let parser = SyntaxParser()
+        parser.parse(code: sourceCode)
+        if let expression = parser.sExpression() {
+            print(expression)
+        }
     }
 
 
