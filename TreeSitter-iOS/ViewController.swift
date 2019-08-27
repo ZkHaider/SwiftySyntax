@@ -34,17 +34,21 @@ class ViewController: UIViewController {
         
         if let syntaxTree = parser.tree {
             let rootNode = syntaxTree.rootNode
-            let childCount = rootNode.childCount
-            print("""
-            🌳 RootNode Child Count: \(childCount)
-            """)
-            
-            let children = rootNode.children
-            for child in children {
-                let subchildren = child.children
-                for subchild in subchildren {
-                    print(subchild)
+            let cursor = rootNode.getCursor()
+            print(rootNode)
+            var traversing: Bool = true
+            while (traversing) {
+                
+                // First check if we have a child
+                traversing = cursor.goToNextSibling()
+                if traversing == false {
+                    traversing = cursor.goToNextSibling()
+                    traversing = cursor.goToFirstChild()
                 }
+                
+                // Get the current node -> print
+                let currentNode = cursor.currentNode()
+                print(currentNode)
             }
         }
     }

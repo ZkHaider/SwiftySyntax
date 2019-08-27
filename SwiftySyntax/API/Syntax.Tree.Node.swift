@@ -136,3 +136,23 @@ extension SyntaxNode: Equatable {
     }
 
 }
+
+extension SyntaxNode: CustomDebugStringConvertible {
+    
+    public var debugDescription: String {
+        let childCount = self.childCount
+        let type = self.type ?? ""
+        let nodeString = self.nodeString ?? ""
+        let startPoint = self.startPoint
+        let endPoint = self.endPoint
+        return """
+        Node:
+        \tchildCount: \(childCount)
+        \ttype: \(type)
+        \tdescription: \(nodeString)
+        \tstartPoint: (column: \(startPoint.column), row: \(startPoint.row))
+        \tendPoint: (column: \(endPoint.column), row: \(endPoint.row))
+        """
+    }
+    
+}
