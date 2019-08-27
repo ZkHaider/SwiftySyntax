@@ -8,22 +8,34 @@
 
 import Foundation
 
-final class SyntaxTree {
+public final class SyntaxTree {
     
     // MARK: - Pointer
     
-    let tree: OpaquePointer
+    public let tree: OpaquePointer
+    
+    // MARK: - Attributes
+    
+    public var rootNode: SyntaxNode {
+        return SyntaxNode(node: ts_tree_root_node(self.tree))
+    }
     
     // MARK: - Init
     
-    init(pointer: OpaquePointer) {
+    internal init(pointer: OpaquePointer) {
         self.tree = pointer
     }
     
-    // MARK: - Deinit
+    // MARK: - Class Functions
     
-    deinit {
+    public func delete() {
         ts_tree_delete(self.tree)
+    }
+    
+    public func copy() -> SyntaxTree {
+        return SyntaxTree(
+            pointer: ts_tree_copy(self.tree)
+        )
     }
     
 }

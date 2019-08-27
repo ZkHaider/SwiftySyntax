@@ -17,8 +17,8 @@ public final class SyntaxParser {
     // MARK: - Attributes
     
     public let config: SyntaxConfiguration
-    
-    internal var tree: SyntaxTree? {
+
+    public var tree: SyntaxTree? {
         didSet {
             guard
                 let _ = oldValue
@@ -27,10 +27,6 @@ public final class SyntaxParser {
             }
             
         }
-    }
-    
-    public var rootNode: TSNode {
-        return ts_tree_root_node(self.parser)
     }
     
     // MARK: - Init
@@ -85,7 +81,7 @@ public final class SyntaxParser {
                         return nil
                     }
                 }
-                return nil 
+                return nil
         }
         return String(cString: pointer)
     }

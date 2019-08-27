@@ -53,6 +53,8 @@
 		C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */; };
 		C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */; };
 		C4ECC9BB231395FA000B3A0B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4ECC9BA231395FA000B3A0B /* README.md */; };
+		C4ECC9BD23150CB9000B3A0B /* Syntax.Tree.Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9BC23150CB9000B3A0B /* Syntax.Tree.Node.swift */; };
+		C4ECC9BF23151217000B3A0B /* Syntax.Tree.Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9BE23151217000B3A0B /* Syntax.Tree.Cursor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Language.swift; sourceTree = "<group>"; };
 		C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.swift; sourceTree = "<group>"; };
 		C4ECC9BA231395FA000B3A0B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C4ECC9BC23150CB9000B3A0B /* Syntax.Tree.Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.Node.swift; sourceTree = "<group>"; };
+		C4ECC9BE23151217000B3A0B /* Syntax.Tree.Cursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.Cursor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +262,8 @@
 			children = (
 				C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */,
 				C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */,
+				C4ECC9BC23150CB9000B3A0B /* Syntax.Tree.Node.swift */,
+				C4ECC9BE23151217000B3A0B /* Syntax.Tree.Cursor.swift */,
 				C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */,
 				C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */,
 			);
@@ -402,12 +408,14 @@
 				C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */,
 				C4533E6D231305A10047AB76 /* utf16.c in Sources */,
 				C4533E66231305A10047AB76 /* lib.c in Sources */,
+				C4ECC9BF23151217000B3A0B /* Syntax.Tree.Cursor.swift in Sources */,
 				C4533E9123130AD40047AB76 /* utf8proc.c in Sources */,
 				C4533EE5231368F10047AB76 /* json.c in Sources */,
 				C4533E69231305A10047AB76 /* get_changed_ranges.c in Sources */,
 				C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */,
 				C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */,
 				C4533E65231305A10047AB76 /* subtree.c in Sources */,
+				C4ECC9BD23150CB9000B3A0B /* Syntax.Tree.Node.swift in Sources */,
 				C4533E76231305A10047AB76 /* parser.c in Sources */,
 				C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */,
 				C4533E7D231305A10047AB76 /* tree_cursor.c in Sources */,

@@ -31,6 +31,22 @@ class ViewController: UIViewController {
         if let expression = parser.sExpression() {
             print(expression)
         }
+        
+        if let syntaxTree = parser.tree {
+            let rootNode = syntaxTree.rootNode
+            let childCount = rootNode.childCount
+            print("""
+            🌳 RootNode Child Count: \(childCount)
+            """)
+            
+            let children = rootNode.children
+            for child in children {
+                let subchildren = child.children
+                for subchild in subchildren {
+                    print(subchild)
+                }
+            }
+        }
     }
 
 
