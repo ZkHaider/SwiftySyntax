@@ -50,20 +50,33 @@ public final class SyntaxCursor {
         return SyntaxNode(node: node)
     }
     
+    @discardableResult
     public func goToParent() -> Bool {
         return ts_tree_cursor_goto_parent(&cursor)
     }
     
+    @discardableResult
     public func goToNextSibling() -> Bool {
         return ts_tree_cursor_goto_next_sibling(&cursor)
     }
     
+    @discardableResult
     public func goToFirstChild() -> Bool {
         return ts_tree_cursor_goto_first_child(&cursor)
     }
     
     public func copy() -> SyntaxCursor {
         return SyntaxCursor(cursor: ts_tree_cursor_copy(&cursor))
+    }
+    
+    // MARK: - Traversal
+    
+    public func preorderTraverse(node: SyntaxNode,
+                                 with effect: (SyntaxNode) -> ()) {
+        effect(node)
+        for child in node.children {
+            preorderTraverse(node: child, with: effect)
+        }
     }
     
 }
