@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42551912351977D009E27E5 /* SwiftySyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42551902351977D009E27E5 /* SwiftySyntaxTests.swift */; };
+		C42551932351977D009E27E5 /* SwiftySyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4533E32231304B90047AB76 /* SwiftySyntax.framework */; };
+		C425519A23519804009E27E5 /* JSON.Parsing.Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425519923519804009E27E5 /* JSON.Parsing.Tests.swift */; };
 		C4533E37231304B90047AB76 /* SwiftySyntax.h in Headers */ = {isa = PBXBuildFile; fileRef = C4533E35231304B90047AB76 /* SwiftySyntax.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4533E63231305A10047AB76 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = C4533E472313059F0047AB76 /* tree.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C4533E64231305A10047AB76 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = C4533E482313059F0047AB76 /* node.c */; };
@@ -48,6 +51,13 @@
 		C4533EA423130C320047AB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA323130C320047AB76 /* Assets.xcassets */; };
 		C4533EA723130C320047AB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4533EA523130C320047AB76 /* LaunchScreen.storyboard */; };
 		C4533EE5231368F10047AB76 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4533EB123131C9F0047AB76 /* json.c */; };
+		C47F87522351B3EF00BFD67B /* JSON.Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F87512351B3EF00BFD67B /* JSON.Symbols.swift */; };
+		C47F87552351BA6C00BFD67B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F87542351BA6C00BFD67B /* String+Extensions.swift */; };
+		C486F7622352C4CC00B2D964 /* Syntax.Tree.Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486F7612352C4CC00B2D964 /* Syntax.Tree.Input.swift */; };
+		C486F7642352D2D900B2D964 /* Syntax.Tree.Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486F7632352D2D900B2D964 /* Syntax.Tree.Point.swift */; };
+		C486F76623539D0500B2D964 /* Sample.JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486F76523539D0400B2D964 /* Sample.JSON.swift */; };
+		C486F7682353B4DC00B2D964 /* bits.h in Headers */ = {isa = PBXBuildFile; fileRef = C486F7672353B4D200B2D964 /* bits.h */; };
+		C486F76A2353B5E100B2D964 /* query.c in Sources */ = {isa = PBXBuildFile; fileRef = C486F7692353B5E100B2D964 /* query.c */; };
 		C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */; };
 		C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */; };
 		C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */; };
@@ -55,9 +65,17 @@
 		C4ECC9BB231395FA000B3A0B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4ECC9BA231395FA000B3A0B /* README.md */; };
 		C4ECC9BD23150CB9000B3A0B /* Syntax.Tree.Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9BC23150CB9000B3A0B /* Syntax.Tree.Node.swift */; };
 		C4ECC9BF23151217000B3A0B /* Syntax.Tree.Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9BE23151217000B3A0B /* Syntax.Tree.Cursor.swift */; };
+		C4ECC9C223178F81000B3A0B /* Line.LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9C123178F80000B3A0B /* Line.LayoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C42551942351977D009E27E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4533E29231304B90047AB76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4533E31231304B90047AB76;
+			remoteInfo = SwiftySyntax;
+		};
 		C4533EAC23130C630047AB76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4533E29231304B90047AB76 /* Project object */;
@@ -68,6 +86,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C425518E2351977D009E27E5 /* SwiftySyntaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySyntaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42551902351977D009E27E5 /* SwiftySyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySyntaxTests.swift; sourceTree = "<group>"; };
+		C42551922351977D009E27E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C425519923519804009E27E5 /* JSON.Parsing.Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.Parsing.Tests.swift; sourceTree = "<group>"; };
 		C4533E32231304B90047AB76 /* SwiftySyntax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftySyntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4533E35231304B90047AB76 /* SwiftySyntax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftySyntax.h; sourceTree = "<group>"; };
 		C4533E36231304B90047AB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +135,13 @@
 		C4533EA623130C320047AB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4533EA823130C320047AB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4533EB123131C9F0047AB76 /* json.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = json.c; sourceTree = "<group>"; };
+		C47F87512351B3EF00BFD67B /* JSON.Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.Symbols.swift; sourceTree = "<group>"; };
+		C47F87542351BA6C00BFD67B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C486F7612352C4CC00B2D964 /* Syntax.Tree.Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.Input.swift; sourceTree = "<group>"; };
+		C486F7632352D2D900B2D964 /* Syntax.Tree.Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.Point.swift; sourceTree = "<group>"; };
+		C486F76523539D0400B2D964 /* Sample.JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.JSON.swift; sourceTree = "<group>"; };
+		C486F7672353B4D200B2D964 /* bits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bits.h; sourceTree = "<group>"; };
+		C486F7692353B5E100B2D964 /* query.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = query.c; sourceTree = "<group>"; };
 		C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Parser.swift; sourceTree = "<group>"; };
 		C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Configuration.swift; sourceTree = "<group>"; };
 		C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Language.swift; sourceTree = "<group>"; };
@@ -120,9 +149,18 @@
 		C4ECC9BA231395FA000B3A0B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4ECC9BC23150CB9000B3A0B /* Syntax.Tree.Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.Node.swift; sourceTree = "<group>"; };
 		C4ECC9BE23151217000B3A0B /* Syntax.Tree.Cursor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Tree.Cursor.swift; sourceTree = "<group>"; };
+		C4ECC9C123178F80000B3A0B /* Line.LayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.LayoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C425518B2351977D009E27E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42551932351977D009E27E5 /* SwiftySyntax.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4533E2F231304B90047AB76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,12 +178,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C425518F2351977D009E27E5 /* SwiftySyntaxTests */ = {
+			isa = PBXGroup;
+			children = (
+				C42551922351977D009E27E5 /* Info.plist */,
+				C42551902351977D009E27E5 /* SwiftySyntaxTests.swift */,
+				C425519923519804009E27E5 /* JSON.Parsing.Tests.swift */,
+				C486F76523539D0400B2D964 /* Sample.JSON.swift */,
+			);
+			path = SwiftySyntaxTests;
+			sourceTree = "<group>";
+		};
 		C4533E28231304B90047AB76 = {
 			isa = PBXGroup;
 			children = (
 				C4ECC9BA231395FA000B3A0B /* README.md */,
 				C4533E9923130C310047AB76 /* TreeSitter-iOS */,
 				C4533E34231304B90047AB76 /* SwiftySyntax */,
+				C425518F2351977D009E27E5 /* SwiftySyntaxTests */,
 				C4533E33231304B90047AB76 /* Products */,
 				C4533EDF231368C10047AB76 /* Frameworks */,
 			);
@@ -156,6 +206,7 @@
 			children = (
 				C4533E32231304B90047AB76 /* SwiftySyntax.framework */,
 				C4533E9823130C300047AB76 /* TreeSitter-iOS.app */,
+				C425518E2351977D009E27E5 /* SwiftySyntaxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,7 +216,9 @@
 			children = (
 				C4533E35231304B90047AB76 /* SwiftySyntax.h */,
 				C4533E36231304B90047AB76 /* Info.plist */,
+				C4ECC9C023178F72000B3A0B /* Views */,
 				C4ECC9B123138221000B3A0B /* API */,
+				C47F87532351BA6000BFD67B /* Extensions */,
 				C4533E462313056F0047AB76 /* include */,
 				C4533EB023131C4C0047AB76 /* languages */,
 				C4533E45231305640047AB76 /* src */,
@@ -207,6 +260,8 @@
 				C4533E472313059F0047AB76 /* tree.h */,
 				C4533E51231305A00047AB76 /* utf16.c */,
 				C4533E50231305A00047AB76 /* utf16.h */,
+				C486F7672353B4D200B2D964 /* bits.h */,
+				C486F7692353B5E100B2D964 /* query.c */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -246,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				C4533EB123131C9F0047AB76 /* json.c */,
+				C47F87512351B3EF00BFD67B /* JSON.Symbols.swift */,
 			);
 			path = json;
 			sourceTree = "<group>";
@@ -257,17 +313,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C47F87532351BA6000BFD67B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C47F87542351BA6C00BFD67B /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C4ECC9B123138221000B3A0B /* API */ = {
 			isa = PBXGroup;
 			children = (
 				C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */,
 				C4ECC9B823139225000B3A0B /* Syntax.Tree.swift */,
+				C486F7612352C4CC00B2D964 /* Syntax.Tree.Input.swift */,
 				C4ECC9BC23150CB9000B3A0B /* Syntax.Tree.Node.swift */,
 				C4ECC9BE23151217000B3A0B /* Syntax.Tree.Cursor.swift */,
 				C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */,
 				C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */,
+				C486F7632352D2D900B2D964 /* Syntax.Tree.Point.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		C4ECC9C023178F72000B3A0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4ECC9C123178F80000B3A0B /* Line.LayoutManager.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +371,7 @@
 				C4533E74231305A10047AB76 /* reduce_action.h in Headers */,
 				C4533E78231305A10047AB76 /* clock.h in Headers */,
 				C4533E6A231305A10047AB76 /* atomic.h in Headers */,
+				C486F7682353B4DC00B2D964 /* bits.h in Headers */,
 				C4533E6E231305A10047AB76 /* error_costs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +379,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C425518D2351977D009E27E5 /* SwiftySyntaxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42551982351977D009E27E5 /* Build configuration list for PBXNativeTarget "SwiftySyntaxTests" */;
+			buildPhases = (
+				C425518A2351977D009E27E5 /* Sources */,
+				C425518B2351977D009E27E5 /* Frameworks */,
+				C425518C2351977D009E27E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C42551952351977D009E27E5 /* PBXTargetDependency */,
+			);
+			name = SwiftySyntaxTests;
+			productName = SwiftySyntaxTests;
+			productReference = C425518E2351977D009E27E5 /* SwiftySyntaxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C4533E31231304B90047AB76 /* SwiftySyntax */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4533E3A231304B90047AB76 /* Build configuration list for PBXNativeTarget "SwiftySyntax" */;
@@ -350,6 +443,9 @@
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = zkhaider;
 				TargetAttributes = {
+					C425518D2351977D009E27E5 = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					C4533E31231304B90047AB76 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
@@ -374,11 +470,19 @@
 			targets = (
 				C4533E9723130C300047AB76 /* TreeSitter-iOS */,
 				C4533E31231304B90047AB76 /* SwiftySyntax */,
+				C425518D2351977D009E27E5 /* SwiftySyntaxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C425518C2351977D009E27E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4533E30231304B90047AB76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,11 +504,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C425518A2351977D009E27E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C425519A23519804009E27E5 /* JSON.Parsing.Tests.swift in Sources */,
+				C42551912351977D009E27E5 /* SwiftySyntaxTests.swift in Sources */,
+				C486F76623539D0500B2D964 /* Sample.JSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4533E2E231304B90047AB76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4ECC9C223178F81000B3A0B /* Line.LayoutManager.swift in Sources */,
 				C4533E9323130AD40047AB76 /* utf8proc_data.c in Sources */,
+				C47F87522351B3EF00BFD67B /* JSON.Symbols.swift in Sources */,
 				C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */,
 				C4533E6D231305A10047AB76 /* utf16.c in Sources */,
 				C4533E66231305A10047AB76 /* lib.c in Sources */,
@@ -412,15 +528,19 @@
 				C4533E9123130AD40047AB76 /* utf8proc.c in Sources */,
 				C4533EE5231368F10047AB76 /* json.c in Sources */,
 				C4533E69231305A10047AB76 /* get_changed_ranges.c in Sources */,
+				C486F76A2353B5E100B2D964 /* query.c in Sources */,
 				C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */,
 				C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */,
 				C4533E65231305A10047AB76 /* subtree.c in Sources */,
+				C486F7622352C4CC00B2D964 /* Syntax.Tree.Input.swift in Sources */,
 				C4ECC9BD23150CB9000B3A0B /* Syntax.Tree.Node.swift in Sources */,
 				C4533E76231305A10047AB76 /* parser.c in Sources */,
 				C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */,
 				C4533E7D231305A10047AB76 /* tree_cursor.c in Sources */,
 				C4533E72231305A10047AB76 /* stack.c in Sources */,
 				C4533E79231305A10047AB76 /* lexer.c in Sources */,
+				C47F87552351BA6C00BFD67B /* String+Extensions.swift in Sources */,
+				C486F7642352D2D900B2D964 /* Syntax.Tree.Point.swift in Sources */,
 				C4533E64231305A10047AB76 /* node.c in Sources */,
 				C4533E67231305A10047AB76 /* language.c in Sources */,
 				C4533E73231305A10047AB76 /* tree.c in Sources */,
@@ -440,6 +560,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C42551952351977D009E27E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4533E31231304B90047AB76 /* SwiftySyntax */;
+			targetProxy = C42551942351977D009E27E5 /* PBXContainerItemProxy */;
+		};
 		C4533EAD23130C630047AB76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4533E31231304B90047AB76 /* SwiftySyntax */;
@@ -467,6 +592,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C42551962351977D009E27E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVL2DEPTTR;
+				INFOPLIST_FILE = SwiftySyntaxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zkhaider.SwiftySyntaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64 i386";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		C42551972351977D009E27E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EVL2DEPTTR;
+				INFOPLIST_FILE = SwiftySyntaxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zkhaider.SwiftySyntaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s x86_64 i386";
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
 		C4533E38231304B90047AB76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -703,6 +876,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C42551982351977D009E27E5 /* Build configuration list for PBXNativeTarget "SwiftySyntaxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42551962351977D009E27E5 /* Debug */,
+				C42551972351977D009E27E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4533E2C231304B90047AB76 /* Build configuration list for PBXProject "SwiftySyntax" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

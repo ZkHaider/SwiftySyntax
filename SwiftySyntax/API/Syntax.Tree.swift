@@ -12,7 +12,7 @@ public final class SyntaxTree {
     
     // MARK: - Pointer
     
-    public let tree: OpaquePointer
+    internal var tree: OpaquePointer
     
     // MARK: - Attributes
     
@@ -27,6 +27,12 @@ public final class SyntaxTree {
     }
     
     // MARK: - Class Functions
+    
+    public func edit(with inputEdit: InputEdit) {
+        var edit = inputEdit.tsInputEdit
+        ts_tree_edit(self.tree,
+                     &edit)
+    }
     
     public func delete() {
         ts_tree_delete(self.tree)

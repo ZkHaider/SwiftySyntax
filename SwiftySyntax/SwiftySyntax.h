@@ -7,6 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <TargetConditionals.h>
+
+#if TARGET_OS_IPHONE
+#import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 
 //! Project version number for SwiftySyntax.
 FOUNDATION_EXPORT double SwiftySyntaxVersionNumber;

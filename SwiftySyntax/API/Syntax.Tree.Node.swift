@@ -143,6 +143,8 @@ extension SyntaxNode: CustomDebugStringConvertible {
         let childCount = self.childCount
         let type = self.type ?? ""
         let nodeString = self.nodeString ?? ""
+        let startByte = self.startByte
+        let endByte = self.endByte
         let startPoint = self.startPoint
         let endPoint = self.endPoint
         return """
@@ -150,6 +152,8 @@ extension SyntaxNode: CustomDebugStringConvertible {
         \tchildCount: \(childCount)
         \ttype: \(type)
         \tdescription: \(nodeString)
+        \tstartByte: \(startByte)
+        \tendByte: \(endByte)
         \tstartPoint: (column: \(startPoint.column), row: \(startPoint.row))
         \tendPoint: (column: \(endPoint.column), row: \(endPoint.row))
         """

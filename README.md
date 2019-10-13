@@ -316,4 +316,4 @@ Node:
 */
 ```
 
-Lots more work to come. Python, PHP, Javascript, Rust, and event Swift grammars will be implemented soon.
+Lots more work to come. Python, PHP, Javascript, Rust, and even Swift grammars will be implemented soon.

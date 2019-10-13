@@ -68,6 +68,43 @@ public final class SyntaxParser {
         self.tree = SyntaxTree(pointer: newTreePointer)
     }
     
+    public func reParse(code string: String,
+                        with edit: InputEdit) {
+        
+        guard
+            let oldTree = self.tree
+            else {
+                self.parse(code: string)
+                return
+        }
+        
+        // Edit
+        
+        var tsEdit = edit.tsInputEdit
+        ts_tree_edit(
+            oldTree.tree,
+            &tsEdit
+        )
+        
+        var node = oldTree.rootNode.node
+        ts_node_edit(
+            &node,
+            &tsEdit
+        )
+        
+        // Reparse
+        
+        if
+            let newTree = ts_parser_parse_string(
+                self.parser,
+                oldTree.tree,
+                string,
+                UInt32(string.count)
+            ) {
+            self.tree = SyntaxTree(pointer: newTree)
+        }
+    }
+    
     public func sExpression(for node: TSNode? = nil) -> String? {
         guard
             let node = node,
