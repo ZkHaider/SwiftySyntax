@@ -65,6 +65,20 @@ for match in matches {
     let endIndex = Int(ts_node_end_byte(ptr))
     print(self.sourceCode.substring(startIndex: startIndex, length: endIndex - startIndex))
 }
+
+/** Output
+
+"counter": 0
+"images": [
+        {
+            "id": 10,
+            "url": "https://someimage.com/image/12"
+        }
+    ]
+"id": 10
+"url": "https://someimage.com/image/12"
+
+**/
 ```
 
 Lots more work to come. Python, PHP, Javascript, Rust, and even Swift grammars will be implemented soon.
