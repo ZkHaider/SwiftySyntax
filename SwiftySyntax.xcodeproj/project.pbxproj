@@ -58,6 +58,8 @@
 		C486F76623539D0500B2D964 /* Sample.JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486F76523539D0400B2D964 /* Sample.JSON.swift */; };
 		C486F7682353B4DC00B2D964 /* bits.h in Headers */ = {isa = PBXBuildFile; fileRef = C486F7672353B4D200B2D964 /* bits.h */; };
 		C486F76A2353B5E100B2D964 /* query.c in Sources */ = {isa = PBXBuildFile; fileRef = C486F7692353B5E100B2D964 /* query.c */; };
+		C486FB032354457100B2D964 /* Syntax.Query.Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB022354457100B2D964 /* Syntax.Query.Matches.swift */; };
+		C486FB052354487200B2D964 /* Syntax.Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB042354487200B2D964 /* Syntax.Query.swift */; };
 		C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */; };
 		C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */; };
 		C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */; };
@@ -142,6 +144,8 @@
 		C486F76523539D0400B2D964 /* Sample.JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.JSON.swift; sourceTree = "<group>"; };
 		C486F7672353B4D200B2D964 /* bits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bits.h; sourceTree = "<group>"; };
 		C486F7692353B5E100B2D964 /* query.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = query.c; sourceTree = "<group>"; };
+		C486FB022354457100B2D964 /* Syntax.Query.Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Query.Matches.swift; sourceTree = "<group>"; };
+		C486FB042354487200B2D964 /* Syntax.Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Query.swift; sourceTree = "<group>"; };
 		C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Parser.swift; sourceTree = "<group>"; };
 		C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Configuration.swift; sourceTree = "<group>"; };
 		C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Language.swift; sourceTree = "<group>"; };
@@ -332,6 +336,8 @@
 				C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */,
 				C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */,
 				C486F7632352D2D900B2D964 /* Syntax.Tree.Point.swift */,
+				C486FB042354487200B2D964 /* Syntax.Query.swift */,
+				C486FB022354457100B2D964 /* Syntax.Query.Matches.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -533,6 +539,8 @@
 				C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */,
 				C4533E65231305A10047AB76 /* subtree.c in Sources */,
 				C486F7622352C4CC00B2D964 /* Syntax.Tree.Input.swift in Sources */,
+				C486FB032354457100B2D964 /* Syntax.Query.Matches.swift in Sources */,
+				C486FB052354487200B2D964 /* Syntax.Query.swift in Sources */,
 				C4ECC9BD23150CB9000B3A0B /* Syntax.Tree.Node.swift in Sources */,
 				C4533E76231305A10047AB76 /* parser.c in Sources */,
 				C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */,

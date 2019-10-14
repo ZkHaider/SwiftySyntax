@@ -270,6 +270,120 @@ final class JSONParsingTests: XCTestCase {
         print("✅ finished in \(endTime - startTime) seconds")
     }
     
+    func testObjectQuery() {
+        
+        let querySource: String = """
+        (object
+            (pair) @pair)
+        """
+        
+        let syntaxParser = SyntaxParser()
+        syntaxParser.parse(code: self.sourceCode)
+        
+        var errorOffset: UInt32 = 0
+        var errorType = TSQueryError(rawValue: 0)
+        guard
+            let tree = syntaxParser.tree,
+            let queryCursor = ts_query_cursor_new(),
+            let query = ts_query_new(
+                tree_sitter_json(),
+                querySource,
+                UInt32(querySource.count),
+                &errorOffset,
+                &errorType
+            )
+            else {
+                assertionFailure()
+                return
+        }
+        
+        ts_query_cursor_exec(queryCursor,
+                             query,
+                             tree.rootNode.node)
+        
+        var match: TSQueryMatch = TSQueryMatch()
+        while ts_query_cursor_next_match(
+            queryCursor,
+            &match) {
+                print(match)
+        }
+    }
+    
+    func testMatchesIterator() {
+        
+        let parser = SyntaxParser()
+        parser.parse(code: self.sourceCode)
+        
+        guard
+            let tree = parser.tree
+            else {
+                assertionFailure()
+                return
+        }
+        
+        let sourceQuery = """
+
+        (object
+            (pair
+                (string)
+                (string)) @pair.string)
+
+        (object
+            (pair
+                (string)
+                (array)) @pair.array)
+
+        (object
+            (pair
+                (string)
+                (number)) @pair.number)
+
+        (object
+            (pair
+                (string)
+                (object)) @pair.object)
+        """
+        
+        let query = Query(language: .json,
+                          sourceQuery: sourceQuery)
+        let matches = parser.matches(with: query,
+                                     on: tree.rootNode)
+        
+        for match in matches {
+            let ptr = match.captures!.pointee.node
+            let startIndex = Int(ts_node_start_byte(ptr))
+            let endIndex = Int(ts_node_end_byte(ptr))
+            print(self.sourceCode.substring(startIndex: startIndex, length: endIndex - startIndex))
+        }
+    }
+    
+    func testPairQuery() {
+     
+        let parser = SyntaxParser()
+        parser.parse(code: self.sourceCode)
+        
+        guard
+            let tree = parser.tree
+            else {
+                assertionFailure()
+                return
+        }
+        
+        let sourceQuery = """
+        (object
+            (pair))
+        """
+        
+        let query = Query(language: .json,
+                          sourceQuery: sourceQuery)
+        let matches = parser.matches(with: query,
+                                     on: tree.rootNode)
+        
+        for match in matches {
+            print(match)
+        }
+    }
+    
     func testMeasureOnTraversing() {
         
         measure {

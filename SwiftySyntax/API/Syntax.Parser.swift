@@ -123,6 +123,14 @@ public final class SyntaxParser {
         return String(cString: pointer)
     }
     
+    // MARK: - Query
+    
+    public func matches(with query: Query,
+                        on node: SyntaxNode) -> MatchesIterator {
+        return MatchesIterator(with: query,
+                               on: node)
+    }
+    
     // MARK: - Deinit
     
     deinit {

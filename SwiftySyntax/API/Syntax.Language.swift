@@ -13,4 +13,12 @@ public enum SyntaxLanguage {
 //    case python
 //    case php
 //    case rust
+    
+    internal var tsLanguage: UnsafePointer<TSLanguage>? {
+        switch self {
+        case .json:
+            return tree_sitter_json()
+        }
+        
+    }
 }
