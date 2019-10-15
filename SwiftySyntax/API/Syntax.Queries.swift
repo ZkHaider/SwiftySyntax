@@ -10,6 +10,16 @@ import Foundation
 
 public enum Queries {
     
+    // MARK: - Objects
+    
+    case objectString
+    case objectArray
+    case objectNumber
+    case objectObject
+    
+    
+    // MARK: - Pairs
+    
     case pairString
     case pairArray
     case pairNumber
@@ -18,16 +28,24 @@ public enum Queries {
     
     internal var query: Query {
         switch self {
+        case .objectString:
+            return QueryRef.Object.objectStringQuery
+        case .objectArray:
+            return QueryRef.Object.objectArrayQuery
+        case .objectNumber:
+            return QueryRef.Object.objectNumberQuery
+        case .objectObject:
+            return QueryRef.Object.objectObjectQuery
         case .pairString:
-            return QueryRef.pairStringQuery
+            return QueryRef.Pair.pairStringQuery
         case .pairArray:
-            return QueryRef.pairArrayQuery
+            return QueryRef.Pair.pairArrayQuery
         case .pairNumber:
-            return QueryRef.pairNumberQuery
+            return QueryRef.Pair.pairNumberQuery
         case .pairObject:
-            return QueryRef.pairObjectQuery
+            return QueryRef.Pair.pairObjectQuery
         case .pairCombined:
-            return QueryRef.pairCombinedQuery
+            return QueryRef.Pair.pairCombinedQuery
         }
     }
     
@@ -35,31 +53,65 @@ public enum Queries {
     
     private struct QueryRef {
         
-        static let pairStringQuery: Query = {
-            createQuery(language: tree_sitter_json(), with: Source.pairString)
-        }()
+        struct Object {
+            
+            static let objectStringQuery: Query = {
+                createQuery(language: tree_sitter_json(), with: Source.Object.objectString)
+            }()
+            
+            static let objectArrayQuery: Query = {
+                return createQuery(language: tree_sitter_json(), with: Source.Object.objectArray)
+            }()
+            
+            static let objectNumberQuery: Query = {
+                return createQuery(language: tree_sitter_json(), with: Source.Object.objectNumber)
+            }()
+            
+            static let objectObjectQuery: Query = {
+                return createQuery(language: tree_sitter_json(), with: Source.Object.objectObject)
+            }()
+            
+            static let objectCombinedQuery: Query = {
+                let combinedQuerySource = [
+                    Source.Object.objectString,
+                    Source.Object.objectArray,
+                    Source.Object.objectNumber,
+                    Source.Object.objectObject
+                ].joined(separator: "\n")
+                return createQuery(language: tree_sitter_json(), with: combinedQuerySource)
+            }()
+            
+        }
         
-        static let pairArrayQuery: Query = {
-            return createQuery(language: tree_sitter_json(), with: Source.pairArray)
-        }()
+        struct Pair {
         
-        static let pairNumberQuery: Query = {
-            return createQuery(language: tree_sitter_json(), with: Source.pairNumber)
-        }()
-        
-        static let pairObjectQuery: Query = {
-            return createQuery(language: tree_sitter_json(), with: Source.pairObject)
-        }()
-        
-        static let pairCombinedQuery: Query = {
-            let combinedQuerySource = [
-                Source.pairString,
-                Source.pairArray,
-                Source.pairNumber,
-                Source.pairObject
-            ].joined(separator: "\n")
-            return createQuery(language: tree_sitter_json(), with: combinedQuerySource)
-        }()
+            static let pairStringQuery: Query = {
+                createQuery(language: tree_sitter_json(), with: Source.Pair.pairString)
+            }()
+            
+            static let pairArrayQuery: Query = {
+                return createQuery(language: tree_sitter_json(), with: Source.Pair.pairArray)
+            }()
+            
+            static let pairNumberQuery: Query = {
+                return createQuery(language: tree_sitter_json(), with: Source.Pair.pairNumber)
+            }()
+            
+            static let pairObjectQuery: Query = {
+                return createQuery(language: tree_sitter_json(), with: Source.Pair.pairObject)
+            }()
+            
+            static let pairCombinedQuery: Query = {
+                let combinedQuerySource = [
+                    Source.Pair.pairString,
+                    Source.Pair.pairArray,
+                    Source.Pair.pairNumber,
+                    Source.Pair.pairObject
+                ].joined(separator: "\n")
+                return createQuery(language: tree_sitter_json(), with: combinedQuerySource)
+            }()
+            
+        }
         
         private static func createQuery(language: UnsafePointer<TSLanguage>!,
                                         with source: Source.Value) -> Query {
@@ -78,10 +130,21 @@ public enum Queries {
     }
     
     internal enum CaptureType: String {
-        case pairString = "pair.string"
-        case pairArray  = "pair.array"
-        case pairNumber = "pair.number"
-        case pairObject = "pair.object"
+        
+        // MARK: - Object
+        
+        case objectString   = "object.string"
+        case objectArray    = "object.array"
+        case objectNumber   = "object.number"
+        case objectObject   = "object.object"
+        
+        // MARK: - Pair
+        
+        case pairKey        = "pair.key"
+        case pairString     = "pair.value.string"
+        case pairArray      = "pair.value.array"
+        case pairNumber     = "pair.value.number"
+        case pairObject     = "pair.value.object"
     }
     
 }

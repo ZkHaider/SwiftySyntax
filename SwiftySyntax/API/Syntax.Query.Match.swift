@@ -10,6 +10,6 @@ import Foundation
 
 public struct Match {
     let id: Int
-    let captureType: Queries.CaptureType
+    let patternIndex: Int
     let captures: [Capture]
 }

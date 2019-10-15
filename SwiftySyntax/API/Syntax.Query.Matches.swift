@@ -40,20 +40,35 @@ public struct MatchesIterator: IteratorProtocol, Sequence {
             self.queryCursorPointer,
             &self.reusableMatch) {
                 
+                // Move this out to clean next function
                 let patternIndex: Int = Int(self.reusableMatch.pattern_index)
-                let captureName = self.query.captureNames[patternIndex]
                 
-                if let captures = self.reusableMatch.captureValues,
-                    let captureType = Queries.CaptureType(rawValue: captureName) {
+                if let captures = self.reusableMatch.captureValues {
                     
-                    let match = Match(
+                    // Create captures
+                    let matchCaptures = captures.compactMap { queryCapture -> Capture? in
+                        guard
+                            queryCapture.index <= self.query.captureNames.count
+                            else { return nil }
+                        
+                        let captureName = self.query.captureNames[Int(queryCapture.index)]
+                        
+                        guard
+                            let captureType = Queries.CaptureType(rawValue: captureName)
+                            else { return nil }
+                        
+                        return Capture(
+                            node: queryCapture.node,
+                            captureType: captureType
+                        )
+                    }
+                    
+                    // Return match
+                    return Match(
                         id: Int(self.reusableMatch.id),
-                        captureType: captureType,
-                        captures: captures.compactMap {
-                            Capture(node: $0.node, index: Int($0.index))
-                        }
+                        patternIndex: patternIndex,
+                        captures: matchCaptures
                     )
-                    return match
                 }
         }
         ts_query_cursor_delete(self.queryCursorPointer)

@@ -28,7 +28,6 @@ parser.parse(code: self.sourceCode)
 guard
     let tree = parser.tree
     else {
-        assertionFailure()
         return
 }
 
@@ -39,7 +38,7 @@ let matches = parser.matches(with: Queries.pairCombined,
 
 for match in matches {
     for capture in match.captures {
-        switch match.captureType {
+        switch capture.captureType {
         case .pairString:
             let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
             print(subString)

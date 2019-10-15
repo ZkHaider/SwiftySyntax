@@ -11,12 +11,12 @@ import Foundation
 public struct Capture {
     
     let node: SyntaxNode
-    let index: Int
+    let captureType: Queries.CaptureType
     
     internal init(node ptr: TSNode,
-                  index: Int) {
+                  captureType: Queries.CaptureType) {
         self.node = SyntaxNode(node: ptr)
-        self.index = index
+        self.captureType = captureType
     }
     
 }

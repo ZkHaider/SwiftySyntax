@@ -15,33 +15,58 @@ extension Queries {
         
         typealias Value = String
         
-        static let pairString: String = """
-        (object
-            (pair
-                (string)
-                (string)) @pair.string)
-        """
+        struct Object {
+            static let objectString: String = """
+            (object
+                (pair
+                    (string)
+                    (string)) @object.string)
+            """
+            
+            static let objectArray: String = """
+            (object
+                (pair
+                    (string)
+                    (array)) @object.array)
+            """
+            
+            static let objectNumber: String = """
+            (object
+                (pair
+                    (string)
+                    (number)) @object.number)
+            """
+            
+            static let objectObject: String = """
+            (object
+                (pair
+                    (string)
+                    (object)) @object.object)
+            """
+        }
         
-        static let pairArray: String = """
-        (object
+        struct Pair {
+            static let pairString: String = """
             (pair
-                (string)
-                (array)) @pair.array)
-        """
-        
-        static let pairNumber: String = """
-        (object
+                (string) @pair.key
+                (string) @pair.value.string)
+            """
+            static let pairNumber: String = """
             (pair
-                (string)
-                (number)) @pair.number)
-        """
-        
-        static let pairObject: String = """
-        (object
+                (string) @pair.key
+                (number) @pair.value.number)
+            """
+            static let pairArray: String = """
             (pair
-                (string)
-                (object)) @pair.object)
-        """
+                (string) @pair.key
+                (array) @pair.value.array)
+            """
+            static let pairObject: String = """
+            (pair
+                (string) @pair.key
+                (object) @pair.value.object)
+            """
+        }
         
     }
     

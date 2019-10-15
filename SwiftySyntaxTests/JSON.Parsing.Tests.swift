@@ -309,6 +309,45 @@ final class JSONParsingTests: XCTestCase {
         }
     }
     
+    func testPairStringQuery() {
+        
+        let parser = SyntaxParser()
+        parser.parse(code: self.sourceCode)
+        
+        guard
+            let tree = parser.tree
+            else {
+                assertionFailure()
+                return
+        }
+        
+        let matches = parser.matches(with: Queries.pairCombined,
+                                     on: tree.rootNode)
+        
+        for match in matches {
+            for capture in match.captures {
+                switch capture.captureType {
+                case .pairKey:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairString:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairNumber:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairObject:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairArray:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                default: continue
+                }
+            }
+        }
+    }
+    
     func testMatchesIterator() {
         
         let parser = SyntaxParser()
@@ -326,7 +365,7 @@ final class JSONParsingTests: XCTestCase {
         
         for match in matches {
             for capture in match.captures {
-                switch match.captureType {
+                switch capture.captureType {
                 case .pairString:
                     let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
                     print(subString)
@@ -339,6 +378,7 @@ final class JSONParsingTests: XCTestCase {
                 case .pairArray:
                     let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
                     print(subString)
+                default: continue
                 }
             }
         }
