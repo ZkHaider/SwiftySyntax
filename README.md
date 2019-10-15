@@ -57,15 +57,19 @@ for match in matches {
 
 /** Output
 
-"counter": 0
-"images": [
+"counter"
+0
+"images"
+[
         {
             "id": 10,
             "url": "https://someimage.com/image/12"
         }
     ]
-"id": 10
-"url": "https://someimage.com/image/12"
+"id"
+10
+"url"
+"https://someimage.com/image/12"
 
 **/
 ```
