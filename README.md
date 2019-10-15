@@ -43,7 +43,7 @@ self._view.textView.attributedText = mutableAttributedString
 
 We get the following:
 
-<img src="https://github.com/ZkHaider/SwiftySyntax/blob/master/ims/not_highlighted.png" />
+<img src="https://github.com/ZkHaider/SwiftySyntax/blob/master/imgs/nothighlighted.png" />
 
 Now let's highlight the JSON syntax:
 
