@@ -129,7 +129,7 @@ public enum Queries {
         
     }
     
-    internal enum CaptureType: String {
+    public enum CaptureType: String {
         
         // MARK: - Object
         

@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Match {
-    let id: Int
-    let patternIndex: Int
-    let captures: [Capture]
+    public let id: Int
+    public let patternIndex: Int
+    public let captures: [Capture]
 }

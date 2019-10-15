@@ -1,0 +1,9 @@
+{
+    "someKey": 0,
+    "someArray": [
+        {
+            "id": 10,
+            "url": "https://www.someurl.com/image/10"
+        }
+    ]
+}

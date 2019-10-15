@@ -10,8 +10,8 @@ import Foundation
 
 public struct Capture {
     
-    let node: SyntaxNode
-    let captureType: Queries.CaptureType
+    public let node: SyntaxNode
+    public let captureType: Queries.CaptureType
     
     internal init(node ptr: TSNode,
                   captureType: Queries.CaptureType) {
