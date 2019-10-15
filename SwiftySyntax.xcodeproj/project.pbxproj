@@ -59,7 +59,11 @@
 		C486F7682353B4DC00B2D964 /* bits.h in Headers */ = {isa = PBXBuildFile; fileRef = C486F7672353B4D200B2D964 /* bits.h */; };
 		C486F76A2353B5E100B2D964 /* query.c in Sources */ = {isa = PBXBuildFile; fileRef = C486F7692353B5E100B2D964 /* query.c */; };
 		C486FB032354457100B2D964 /* Syntax.Query.Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB022354457100B2D964 /* Syntax.Query.Matches.swift */; };
-		C486FB052354487200B2D964 /* Syntax.Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB042354487200B2D964 /* Syntax.Query.swift */; };
+		C486FB07235574E900B2D964 /* Syntax.Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB06235574E900B2D964 /* Syntax.Queries.swift */; };
+		C486FB0B2355770F00B2D964 /* Syntax.Queries.Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB0A2355770F00B2D964 /* Syntax.Queries.Source.swift */; };
+		C486FB0D23557A4900B2D964 /* Syntax.Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB0C23557A4900B2D964 /* Syntax.Query.swift */; };
+		C486FB0F23558EBF00B2D964 /* Syntax.Query.Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB0E23558EBF00B2D964 /* Syntax.Query.Match.swift */; };
+		C486FB112355934600B2D964 /* Syntax.Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FB102355934600B2D964 /* Syntax.Capture.swift */; };
 		C4ECC9B323138257000B3A0B /* Syntax.Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */; };
 		C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */; };
 		C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */; };
@@ -145,7 +149,11 @@
 		C486F7672353B4D200B2D964 /* bits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bits.h; sourceTree = "<group>"; };
 		C486F7692353B5E100B2D964 /* query.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = query.c; sourceTree = "<group>"; };
 		C486FB022354457100B2D964 /* Syntax.Query.Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Query.Matches.swift; sourceTree = "<group>"; };
-		C486FB042354487200B2D964 /* Syntax.Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Query.swift; sourceTree = "<group>"; };
+		C486FB06235574E900B2D964 /* Syntax.Queries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Queries.swift; sourceTree = "<group>"; };
+		C486FB0A2355770F00B2D964 /* Syntax.Queries.Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Queries.Source.swift; sourceTree = "<group>"; };
+		C486FB0C23557A4900B2D964 /* Syntax.Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Query.swift; sourceTree = "<group>"; };
+		C486FB0E23558EBF00B2D964 /* Syntax.Query.Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Query.Match.swift; sourceTree = "<group>"; };
+		C486FB102355934600B2D964 /* Syntax.Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Capture.swift; sourceTree = "<group>"; };
 		C4ECC9B223138257000B3A0B /* Syntax.Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Parser.swift; sourceTree = "<group>"; };
 		C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Configuration.swift; sourceTree = "<group>"; };
 		C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.Language.swift; sourceTree = "<group>"; };
@@ -336,8 +344,12 @@
 				C4ECC9B423138275000B3A0B /* Syntax.Configuration.swift */,
 				C4ECC9B6231382B6000B3A0B /* Syntax.Language.swift */,
 				C486F7632352D2D900B2D964 /* Syntax.Tree.Point.swift */,
-				C486FB042354487200B2D964 /* Syntax.Query.swift */,
+				C486FB0E23558EBF00B2D964 /* Syntax.Query.Match.swift */,
 				C486FB022354457100B2D964 /* Syntax.Query.Matches.swift */,
+				C486FB06235574E900B2D964 /* Syntax.Queries.swift */,
+				C486FB0A2355770F00B2D964 /* Syntax.Queries.Source.swift */,
+				C486FB0C23557A4900B2D964 /* Syntax.Query.swift */,
+				C486FB102355934600B2D964 /* Syntax.Capture.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -537,14 +549,18 @@
 				C486F76A2353B5E100B2D964 /* query.c in Sources */,
 				C4ECC9B923139225000B3A0B /* Syntax.Tree.swift in Sources */,
 				C4ECC9B7231382B6000B3A0B /* Syntax.Language.swift in Sources */,
+				C486FB0B2355770F00B2D964 /* Syntax.Queries.Source.swift in Sources */,
+				C486FB0D23557A4900B2D964 /* Syntax.Query.swift in Sources */,
 				C4533E65231305A10047AB76 /* subtree.c in Sources */,
 				C486F7622352C4CC00B2D964 /* Syntax.Tree.Input.swift in Sources */,
 				C486FB032354457100B2D964 /* Syntax.Query.Matches.swift in Sources */,
-				C486FB052354487200B2D964 /* Syntax.Query.swift in Sources */,
 				C4ECC9BD23150CB9000B3A0B /* Syntax.Tree.Node.swift in Sources */,
+				C486FB07235574E900B2D964 /* Syntax.Queries.swift in Sources */,
+				C486FB0F23558EBF00B2D964 /* Syntax.Query.Match.swift in Sources */,
 				C4533E76231305A10047AB76 /* parser.c in Sources */,
 				C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */,
 				C4533E7D231305A10047AB76 /* tree_cursor.c in Sources */,
+				C486FB112355934600B2D964 /* Syntax.Capture.swift in Sources */,
 				C4533E72231305A10047AB76 /* stack.c in Sources */,
 				C4533E79231305A10047AB76 /* lexer.c in Sources */,
 				C47F87552351BA6C00BFD67B /* String+Extensions.swift in Sources */,

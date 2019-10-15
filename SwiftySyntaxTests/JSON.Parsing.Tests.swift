@@ -321,39 +321,26 @@ final class JSONParsingTests: XCTestCase {
                 return
         }
         
-        let sourceQuery = """
-
-        (object
-            (pair
-                (string)
-                (string)) @pair.string)
-
-        (object
-            (pair
-                (string)
-                (array)) @pair.array)
-
-        (object
-            (pair
-                (string)
-                (number)) @pair.number)
-
-        (object
-            (pair
-                (string)
-                (object)) @pair.object)
-        """
-        
-        let query = Query(language: .json,
-                          sourceQuery: sourceQuery)
-        let matches = parser.matches(with: query,
+        let matches = parser.matches(with: Queries.pairCombined,
                                      on: tree.rootNode)
         
         for match in matches {
-            let ptr = match.captures!.pointee.node
-            let startIndex = Int(ts_node_start_byte(ptr))
-            let endIndex = Int(ts_node_end_byte(ptr))
-            print(self.sourceCode.substring(startIndex: startIndex, length: endIndex - startIndex))
+            for capture in match.captures {
+                switch match.captureType {
+                case .pairString:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairNumber:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairObject:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                case .pairArray:
+                    let subString = self.sourceCode[capture.node.startByte..<capture.node.endByte]
+                    print(subString)
+                }
+            }
         }
     }
     
@@ -369,14 +356,7 @@ final class JSONParsingTests: XCTestCase {
                 return
         }
         
-        let sourceQuery = """
-        (object
-            (pair))
-        """
-        
-        let query = Query(language: .json,
-                          sourceQuery: sourceQuery)
-        let matches = parser.matches(with: query,
+        let matches = parser.matches(with: Queries.pairObject,
                                      on: tree.rootNode)
         
         for match in matches {

@@ -125,7 +125,7 @@ public final class SyntaxParser {
     
     // MARK: - Query
     
-    public func matches(with query: Query,
+    public func matches(with query: Queries,
                         on node: SyntaxNode) -> MatchesIterator {
         return MatchesIterator(with: query,
                                on: node)
