@@ -2,20 +2,23 @@
 //  View.swift
 //  TreeSitter-iOS
 //
-//  Created by Haider Khan on 10/19/19.
+//  Created by Haider Khan on 10/14/19.
 //  Copyright © 2019 zkhaider. All rights reserved.
 //
 
 import Foundation
-import SwiftySyntax
 import UIKit
 
-final class View: UIView {
+final class OldView: UIView {
     
     // MARK: - Views
     
-    let textView: SyntaxTextView = {
-        return SyntaxTextView(frame: .zero, language: .json)
+    let textView: UITextView = {
+        let view = UITextView(frame: .zero)
+        view.font = UIFont.systemFont(ofSize: 16.0)
+        view.textColor = .white
+        view.backgroundColor = .clear
+        return view
     }()
     
     // MARK: - Init
