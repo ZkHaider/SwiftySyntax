@@ -5,13 +5,13 @@
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
-#define LANGUAGE_VERSION 9
-#define STATE_COUNT 31
-#define SYMBOL_COUNT 24
-#define ALIAS_COUNT 0
-#define TOKEN_COUNT 14
-#define EXTERNAL_TOKEN_COUNT 0
-#define MAX_ALIAS_SEQUENCE_LENGTH 0
+#define JSON_LANGUAGE_VERSION 9
+#define JSON_STATE_COUNT 31
+#define JSON_SYMBOL_COUNT 24
+#define JSON_ALIAS_COUNT 0
+#define JSON_TOKEN_COUNT 14
+#define JSON_EXTERNAL_TOKEN_COUNT 0
+#define JSON_MAX_ALIAS_SEQUENCE_LENGTH 0
 
 enum {
   anon_sym_LBRACE = 1,
@@ -39,7 +39,7 @@ enum {
   aux_sym_string_content_repeat1 = 23,
 };
 
-static const char *ts_symbol_names[] = {
+static const char *json_ts_symbol_names[] = {
   [ts_builtin_sym_end] = "END",
   [anon_sym_LBRACE] = "{",
   [anon_sym_COMMA] = ",",
@@ -66,7 +66,7 @@ static const char *ts_symbol_names[] = {
   [aux_sym_string_content_repeat1] = "string_content_repeat1",
 };
 
-static const TSSymbolMetadata ts_symbol_metadata[] = {
+static const TSSymbolMetadata json_ts_symbol_metadata[] = {
   [ts_builtin_sym_end] = {
     .visible = false,
     .named = true,
@@ -165,7 +165,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
 };
 
-static bool ts_lex(TSLexer *lexer, TSStateId state) {
+static bool json_ts_lex(TSLexer *lexer, TSStateId state) {
   START_LEXER();
   switch (state) {
     case 0:
@@ -607,7 +607,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   }
 }
 
-static TSLexMode ts_lex_modes[STATE_COUNT] = {
+static TSLexMode json_ts_lex_modes[JSON_STATE_COUNT] = {
   [0] = {.lex_state = 0},
   [1] = {.lex_state = 40},
   [2] = {.lex_state = 41},
@@ -641,7 +641,7 @@ static TSLexMode ts_lex_modes[STATE_COUNT] = {
   [30] = {.lex_state = 49},
 };
 
-static uint16_t ts_parse_table[STATE_COUNT][SYMBOL_COUNT] = {
+static uint16_t json_ts_parse_table[JSON_STATE_COUNT][JSON_SYMBOL_COUNT] = {
   [0] = {
     [ts_builtin_sym_end] = ACTIONS(1),
     [anon_sym_LBRACE] = ACTIONS(1),
@@ -849,7 +849,7 @@ static uint16_t ts_parse_table[STATE_COUNT][SYMBOL_COUNT] = {
   },
 };
 
-static TSParseActionEntry ts_parse_actions[] = {
+static TSParseActionEntry json_ts_parse_actions[] = {
   [0] = {.count = 0, .reusable = false},
   [1] = {.count = 1, .reusable = true}, RECOVER(),
   [3] = {.count = 1, .reusable = true}, SHIFT(2),
@@ -899,18 +899,18 @@ static TSParseActionEntry ts_parse_actions[] = {
 
 extern const TSLanguage *tree_sitter_json() {
   static TSLanguage language = {
-    .version = LANGUAGE_VERSION,
-    .symbol_count = SYMBOL_COUNT,
-    .alias_count = ALIAS_COUNT,
-    .token_count = TOKEN_COUNT,
-    .symbol_metadata = ts_symbol_metadata,
-    .parse_table = (const unsigned short *)ts_parse_table,
-    .parse_actions = ts_parse_actions,
-    .lex_modes = ts_lex_modes,
-    .symbol_names = ts_symbol_names,
-    .max_alias_sequence_length = MAX_ALIAS_SEQUENCE_LENGTH,
-    .lex_fn = ts_lex,
-    .external_token_count = EXTERNAL_TOKEN_COUNT,
+    .version = JSON_LANGUAGE_VERSION,
+    .symbol_count = JSON_SYMBOL_COUNT,
+    .alias_count = JSON_ALIAS_COUNT,
+    .token_count = JSON_TOKEN_COUNT,
+    .symbol_metadata = json_ts_symbol_metadata,
+    .parse_table = (const unsigned short *)json_ts_parse_table,
+    .parse_actions = json_ts_parse_actions,
+    .lex_modes = json_ts_lex_modes,
+    .symbol_names = json_ts_symbol_names,
+    .max_alias_sequence_length = JSON_MAX_ALIAS_SEQUENCE_LENGTH,
+    .lex_fn = json_ts_lex,
+    .external_token_count = JSON_EXTERNAL_TOKEN_COUNT,
   };
   return &language;
 }

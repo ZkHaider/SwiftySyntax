@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4178E6B23E63F3B006CE5A3 /* swift.c in Sources */ = {isa = PBXBuildFile; fileRef = C4178E6A23E63F3B006CE5A3 /* swift.c */; };
+		C4178E6D23E648B6006CE5A3 /* Swift.Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4178E6C23E648B6006CE5A3 /* Swift.Symbols.swift */; };
+		C4178E6F23E648C3006CE5A3 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4178E6E23E648C3006CE5A3 /* Symbols.swift */; };
+		C4178E7123E64E96006CE5A3 /* Swift.Parsing.Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4178E7023E64E96006CE5A3 /* Swift.Parsing.Tests.swift */; };
 		C42551912351977D009E27E5 /* SwiftySyntaxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42551902351977D009E27E5 /* SwiftySyntaxTests.swift */; };
 		C42551932351977D009E27E5 /* SwiftySyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4533E32231304B90047AB76 /* SwiftySyntax.framework */; };
 		C425519A23519804009E27E5 /* JSON.Parsing.Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425519923519804009E27E5 /* JSON.Parsing.Tests.swift */; };
@@ -102,6 +106,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4178E6A23E63F3B006CE5A3 /* swift.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = swift.c; sourceTree = "<group>"; };
+		C4178E6C23E648B6006CE5A3 /* Swift.Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift.Symbols.swift; sourceTree = "<group>"; };
+		C4178E6E23E648C3006CE5A3 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		C4178E7023E64E96006CE5A3 /* Swift.Parsing.Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift.Parsing.Tests.swift; sourceTree = "<group>"; };
 		C425518E2351977D009E27E5 /* SwiftySyntaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySyntaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42551902351977D009E27E5 /* SwiftySyntaxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySyntaxTests.swift; sourceTree = "<group>"; };
 		C42551922351977D009E27E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +218,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4178E6923E63C87006CE5A3 /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				C4178E6A23E63F3B006CE5A3 /* swift.c */,
+				C4178E6C23E648B6006CE5A3 /* Swift.Symbols.swift */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
 		C425518F2351977D009E27E5 /* SwiftySyntaxTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +235,7 @@
 				C425519923519804009E27E5 /* JSON.Parsing.Tests.swift */,
 				C486F76523539D0400B2D964 /* Sample.JSON.swift */,
 				C47582D92355AB4B007E33A7 /* sample.json */,
+				C4178E7023E64E96006CE5A3 /* Swift.Parsing.Tests.swift */,
 			);
 			path = SwiftySyntaxTests;
 			sourceTree = "<group>";
@@ -331,7 +349,9 @@
 		C4533EB023131C4C0047AB76 /* languages */ = {
 			isa = PBXGroup;
 			children = (
+				C4178E6923E63C87006CE5A3 /* swift */,
 				C4533EB5231325090047AB76 /* json */,
+				C4178E6E23E648C3006CE5A3 /* Symbols.swift */,
 			);
 			path = languages;
 			sourceTree = "<group>";
@@ -590,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4178E7123E64E96006CE5A3 /* Swift.Parsing.Tests.swift in Sources */,
 				C425519A23519804009E27E5 /* JSON.Parsing.Tests.swift in Sources */,
 				C42551912351977D009E27E5 /* SwiftySyntaxTests.swift in Sources */,
 				C486F76623539D0500B2D964 /* Sample.JSON.swift in Sources */,
@@ -625,13 +646,16 @@
 				C486FB0F23558EBF00B2D964 /* Syntax.Query.Match.swift in Sources */,
 				C4533E76231305A10047AB76 /* parser.c in Sources */,
 				C47582EE235C1EA8007E33A7 /* Syntax.TextView.swift in Sources */,
+				C4178E6F23E648C3006CE5A3 /* Symbols.swift in Sources */,
 				C4ECC9B523138275000B3A0B /* Syntax.Configuration.swift in Sources */,
 				C4533E7D231305A10047AB76 /* tree_cursor.c in Sources */,
+				C4178E6B23E63F3B006CE5A3 /* swift.c in Sources */,
 				C486FB112355934600B2D964 /* Syntax.Capture.swift in Sources */,
 				C4533E72231305A10047AB76 /* stack.c in Sources */,
 				C47582E4235C123A007E33A7 /* Syntax.Text.Container.swift in Sources */,
 				C4533E79231305A10047AB76 /* lexer.c in Sources */,
 				C47F87552351BA6C00BFD67B /* String+Extensions.swift in Sources */,
+				C4178E6D23E648B6006CE5A3 /* Swift.Symbols.swift in Sources */,
 				C486F7642352D2D900B2D964 /* Syntax.Tree.Point.swift in Sources */,
 				C4533E64231305A10047AB76 /* node.c in Sources */,
 				C4533E67231305A10047AB76 /* language.c in Sources */,

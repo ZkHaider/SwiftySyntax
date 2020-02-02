@@ -126,6 +126,10 @@ typedef enum {
 
 /// JSON
 const TSLanguage *tree_sitter_json(void);
+
+/// Swift
+
+const TSLanguage *tree_sitter_swift(void);
     
 /// Python
 //const TSLanguage *tree_sitter_python(void);

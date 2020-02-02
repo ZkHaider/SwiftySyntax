@@ -37,6 +37,8 @@ public final class SyntaxParser {
         switch config.language {
         case .json:
             ts_parser_set_language(self.parser, tree_sitter_json())
+        case .swift:
+            ts_parser_set_language(self.parser, tree_sitter_swift())
 //        case .python:
 //            ts_parser_set_language(self.parser, tree_sitter_python())
 //        case .php:

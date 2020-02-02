@@ -8,11 +8,6 @@
 
 import Foundation
 
-public protocol Symbols: Hashable, CaseIterable {
-    static var allValues: [Self] { get }
-    static var symbolMap: [String: Self] { get }
-}
-
 public enum JSONSymbols: String {
     case openCurlyBrace     = "{"
     case comma              = ","
