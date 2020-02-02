@@ -10,6 +10,7 @@ import Foundation
 
 public enum SyntaxLanguage {
     case json
+    case swift
 //    case python
 //    case php
 //    case rust
@@ -18,6 +19,8 @@ public enum SyntaxLanguage {
         switch self {
         case .json:
             return tree_sitter_json()
+        case .swift:
+            return tree_sitter_swift()
         }
         
     }
